@@ -1,0 +1,25 @@
+spring:
+  config:
+    import: optional:secret.yaml
+
+server:
+  port: 8082
+
+logging:
+  file:
+    name: './socket-service/src/main/resources/log/wiber-socket-service.log'
+  level:
+    org:
+      springframework:
+        web:
+          socket: DEBUG
+
+queue:
+  sms:
+    name: 'sms-queue'
+  car-request:
+    name: 'car-request-queue'
+  car-request-status:
+    name: 'car-request-status-queue'
+  locate-request:
+    name: 'locate-request-queue'
